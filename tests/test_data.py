@@ -1,6 +1,11 @@
 import pytest
 from src.data.data import Data
 
+class Data:
+    def invertir_lista(self,lista):
+        lista.reverse()
+        return lista
+
 class TestData:
     def setup_method(self):
         self.data = Data()
