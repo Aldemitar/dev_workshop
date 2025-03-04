@@ -14,6 +14,9 @@ class Logica:
     def XOR(self, a, b):
         return a != b
     
+    def NAND(self, a, b):
+        return not (a and b)
+
 class TestLogica:
     def setup_method(self):
         self.logica = Logica()
