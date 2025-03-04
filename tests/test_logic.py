@@ -23,6 +23,9 @@ class Logica:
     def XNOR(self, a, b):
         return a == b
 
+    def implicacion(self, a, b):
+        return not a or b
+
 class TestLogica:
     def setup_method(self):
         self.logica = Logica()
