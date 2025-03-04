@@ -66,6 +66,11 @@ class Geometria:
     def punto_medio(self, x1, y1, x2, y2):
         return ((x1 + x2) / 2, (y1 + y2) / 2)
 
+    def pendiente_recta(self, x1, y1, x2, y2):
+        if x2 - x1 == 0:
+            raise ZeroDivisionError("La pendiente de una línea vertical es infinita.")
+        return (y2 - y1) / (x2 - x1)
+
 
 class TestGeometria:
     def setup_method(self):
