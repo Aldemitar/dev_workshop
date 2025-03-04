@@ -45,6 +45,10 @@ class Geometria:
     def volumen_cubo(self, lado):
         return lado ** 3
 
+    def area_superficie_cubo(self, lado):
+        return 6 * (lado ** 2)
+
+
 class TestGeometria:
     def setup_method(self):
         self.geometria = Geometria()
