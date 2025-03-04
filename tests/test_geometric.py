@@ -42,6 +42,9 @@ class Geometria:
     def perimetro_hexagono_regular(self, lado):
         return 6 * lado
 
+    def volumen_cubo(self, lado):
+        return lado ** 3
+
 class TestGeometria:
     def setup_method(self):
         self.geometria = Geometria()
