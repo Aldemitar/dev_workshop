@@ -26,6 +26,13 @@ class Magic:
                 return False
         return True
 
+    def generar_primos(self, n):
+        primos = []
+        for num in range(2, n + 1):
+            if self.es_primo(num):
+                primos.append(num)
+        return primos
+
 class TestMagic:
     def setup_method(self):
         self.magic = Magic()
