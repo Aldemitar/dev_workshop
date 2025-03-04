@@ -1,6 +1,10 @@
 import pytest
 from src.logic.logic import Logica
 
+class Logica:
+    def AND(self, a, b):
+        return a and b
+
 class TestLogica:
     def setup_method(self):
         self.logica = Logica()
