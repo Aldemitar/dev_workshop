@@ -18,6 +18,9 @@ class Geometria:
     def area_triangulo(self, base, altura):
         return 0.5 * base * altura
 
+    def perimetro_triangulo(self, lado1, lado2, lado3):
+        return lado1 + lado2 + lado3
+
 
 class TestGeometria:
     def setup_method(self):
