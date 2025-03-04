@@ -33,6 +33,8 @@ class Geometria:
     def area_pentagono_regular(self, lado, apotema):
         return 0.5 * 5 * lado * apotema
 
+    def perimetro_pentagono_regular(self, lado):
+        return 5 * lado
 
 class TestGeometria:
     def setup_method(self):
