@@ -5,7 +5,13 @@ class Data:
     def invertir_lista(self,lista):
         lista.reverse()
         return lista
-
+    
+    def buscar_elemento(self, lista, elemento):
+         if elemento in lista:
+            return lista.index(elemento)
+         return -1
+    
+    
 class TestData:
     def setup_method(self):
         self.data = Data()
