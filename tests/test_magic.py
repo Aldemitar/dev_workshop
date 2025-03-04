@@ -55,6 +55,11 @@ class Magic:
         else:
             return n * self.factorial(n - 1)
 
+    def mcd(self, a, b):
+        while b != 0:
+            a, b = b, a % b
+        return a
+
 class TestMagic:
     def setup_method(self):
         self.magic = Magic()
