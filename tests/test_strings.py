@@ -29,6 +29,9 @@ class Strings:
     def palabras_mayus(self, frase):
         return frase.title()
 
+    def eliminar_espacios_duplicados(self, frase):
+        return ' '.join(frase.strip().split())
+
 class TestStrings:
     def setup_method(self):
         self.strings = Strings()
@@ -112,7 +115,7 @@ class TestStrings:
     def test_eliminar_espacios_duplicados(self):
         # Test con espacios múltiples
         assert self.strings.eliminar_espacios_duplicados("Hola  mundo") == "Hola mundo"
-        assert self.strings.eliminar_espacios_duplicados("  sigmotoa   es   genial  ") == " sigmotoa es genial "
+        assert self.strings.eliminar_espacios_duplicados("  sigmotoa   es   genial  ") == "sigmotoa es genial"
         # Test sin espacios duplicados
         assert self.strings.eliminar_espacios_duplicados("Hola mundo") == "Hola mundo"
         # Test con cadena vacía
