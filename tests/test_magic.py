@@ -33,6 +33,12 @@ class Magic:
                 primos.append(num)
         return primos
 
+    def es_numero_perfecto(self, n):
+        if n <= 1:
+            return False
+        divisores = [i for i in range(1, n) if n % i == 0]
+        return sum(divisores) == n
+
 class TestMagic:
     def setup_method(self):
         self.magic = Magic()
