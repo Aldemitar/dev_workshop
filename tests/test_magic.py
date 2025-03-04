@@ -68,6 +68,11 @@ class Magic:
     def suma_digitos(self, numero):
         return sum(int(digit) for digit in str(abs(numero)))
 
+    def es_numero_armstrong(self, numero):
+        num_str = str(numero)
+        n = len(num_str)
+        return numero == sum(int(digit) ** n for digit in num_str)
+
 class TestMagic:
     def setup_method(self):
         self.magic = Magic()
