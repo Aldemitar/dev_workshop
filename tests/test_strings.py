@@ -26,6 +26,9 @@ class Strings:
         palabras = frase.strip().split()
         return len(palabras)
 
+    def palabras_mayus(self, frase):
+        return frase.title()
+
 class TestStrings:
     def setup_method(self):
         self.strings = Strings()
