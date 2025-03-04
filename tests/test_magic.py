@@ -65,6 +65,9 @@ class Magic:
             return 0
         return abs(a * b) // self.mcd(a, b)
 
+    def suma_digitos(self, numero):
+        return sum(int(digit) for digit in str(abs(numero)))
+
 class TestMagic:
     def setup_method(self):
         self.magic = Magic()
