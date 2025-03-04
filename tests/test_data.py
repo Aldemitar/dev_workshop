@@ -17,6 +17,26 @@ class Pila:
     def is_empty(self):
         return len(self.elementos) == 0
 
+class Cola:
+    def __init__(self):
+        self.elementos = []
+
+    def enqueue(self, valor):
+        self.elementos.append(valor)
+
+    def dequeue(self):
+        if self.is_empty():
+            raise IndexError("No se puede hacer dequeue en una cola vacía")
+        return self.elementos.pop(0)
+
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("No se puede hacer peek en una cola vacía")
+        return self.elementos[0]
+
+    def is_empty(self):
+        return len(self.elementos) == 0
+
 class Data:
     def invertir_lista(self,lista):
         lista.reverse()
@@ -80,7 +100,15 @@ class Data:
             "peek": pila.peek,
             "is_empty": pila.is_empty
         }
-
+    
+    def implementar_cola(self):
+            cola = Cola()
+            return {
+                "enqueue": cola.enqueue,
+                "dequeue": cola.dequeue,
+                "peek": cola.peek,
+                "is_empty": cola.is_empty
+            }    
 
 class TestData:
     def setup_method(self):
