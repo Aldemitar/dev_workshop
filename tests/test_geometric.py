@@ -12,6 +12,10 @@ class Geometria:
     def area_circulo(self, radio):
         return math.pi * radio ** 2
 
+    def perimetro_circulo(self, radio):
+        return 2 * math.pi * radio
+
+
 class TestGeometria:
     def setup_method(self):
         self.geometria = Geometria()
