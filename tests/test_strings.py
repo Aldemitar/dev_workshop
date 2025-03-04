@@ -22,6 +22,10 @@ class Strings:
             cadena2 = cadena2.replace(" ", "").lower()
             return sorted(cadena1) == sorted(cadena2)
     
+    def contar_palabras(self, frase):
+        palabras = frase.strip().split()
+        return len(palabras)
+
 class TestStrings:
     def setup_method(self):
         self.strings = Strings()
