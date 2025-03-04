@@ -25,6 +25,9 @@ class Logica:
 
     def implicacion(self, a, b):
         return not a or b
+    
+    def bi_implicacion(self, a, b):
+        return a == b
 
 class TestLogica:
     def setup_method(self):
