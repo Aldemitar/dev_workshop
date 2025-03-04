@@ -15,6 +15,9 @@ class Geometria:
     def perimetro_circulo(self, radio):
         return 2 * math.pi * radio
 
+    def area_triangulo(self, base, altura):
+        return 0.5 * base * altura
+
 
 class TestGeometria:
     def setup_method(self):
