@@ -60,6 +60,11 @@ class Magic:
             a, b = b, a % b
         return a
 
+    def mcm(self, a, b):
+        if a == 0 or b == 0:
+            return 0
+        return abs(a * b) // self.mcd(a, b)
+
 class TestMagic:
     def setup_method(self):
         self.magic = Magic()
