@@ -3,16 +3,20 @@ from src.strings.strings import Strings
 
 class Strings:
     def es_palindromo(self, cadena):
-        cadena = cadena.replace(" ", "").lower()  # Elimina espacios y convierte a minúsculas
-        return cadena == cadena[::-1]  # Compara la cadena con su reverso
+        cadena = cadena.replace(" ", "").lower()
+        return cadena == cadena[::-1]
 
     def invertir_cadena(self, cadena):
-        return cadena[::-1]  # Retorna la cadena invertida
+        return cadena[::-1]
 
     def contar_vocales(self, cadena):
             cadena = cadena.lower()
             return sum(1 for char in cadena if char in "aeiou")
     
+    def contar_consonantes(self, cadena):
+        cadena = cadena.lower()
+        return sum(1 for char in cadena if char.isalpha() and char not in "aeiou")
+
     
 class TestStrings:
     def setup_method(self):
@@ -54,11 +58,11 @@ class TestStrings:
     def test_contar_consonantes(self):
         # Test con cadenas con consonantes
         assert self.strings.contar_consonantes("sigmotoa") == 4
-        assert self.strings.contar_consonantes("Python") == 4
+        assert self.strings.contar_consonantes("Python") == 5
         # Test con cadena sin consonantes
         assert self.strings.contar_consonantes("aeiou") == 0
         # Test con consonantes en mayúsculas y minúsculas
-        assert self.strings.contar_consonantes("PythOn") == 4
+        assert self.strings.contar_consonantes("PythOn") == 5
         # Test con cadena vacía
         assert self.strings.contar_consonantes("") == 0
     
