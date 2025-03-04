@@ -27,6 +27,10 @@ class Geometria:
     def area_trapecio(self, base_mayor, base_menor, altura):
         return 0.5 * (base_mayor + base_menor) * altura
 
+    def area_rombo(self, diagonal_mayor, diagonal_menor):
+        return 0.5 * diagonal_mayor * diagonal_menor
+
+
 
 class TestGeometria:
     def setup_method(self):
