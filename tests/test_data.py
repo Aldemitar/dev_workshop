@@ -38,6 +38,14 @@ class Data:
             j += 1
         return resultado
 
+    def rotar_lista(self, lista, posiciones):
+        if not lista or posiciones == 0:
+            return lista
+        n = len(lista)
+        posiciones = posiciones % n
+        return lista[-posiciones:] + lista[:-posiciones]
+
+
 class TestData:
     def setup_method(self):
         self.data = Data()
