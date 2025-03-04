@@ -72,6 +72,19 @@ class Magic:
         num_str = str(numero)
         n = len(num_str)
         return numero == sum(int(digit) ** n for digit in num_str)
+    
+    def es_cuadrado_magico(self, matriz):
+        n = len(matriz)
+        suma_filas = [sum(fila) for fila in matriz]
+        suma_columnas = [sum(matriz[i][j] for i in range(n)) for j in range(n)]
+        suma_diagonal_principal = sum(matriz[i][i] for i in range(n))
+        suma_diagonal_secundaria = sum(matriz[i][n - 1 - i] for i in range(n))
+        return (
+            len(set(suma_filas)) == 1 and
+            len(set(suma_columnas)) == 1 and
+            suma_filas[0] == suma_columnas[0] == suma_diagonal_principal == suma_diagonal_secundaria
+        )
+
 
 class TestMagic:
     def setup_method(self):
