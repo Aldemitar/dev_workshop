@@ -4,6 +4,9 @@ from src.logic.logic import Logica
 class Logica:
     def AND(self, a, b):
         return a and b
+    
+    def OR(self, a, b):
+        return a or b
 
 class TestLogica:
     def setup_method(self):
