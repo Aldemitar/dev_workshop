@@ -39,6 +39,9 @@ class Geometria:
     def area_hexagono_regular(self, lado, apotema):
         return 3 * lado * apotema
 
+    def perimetro_hexagono_regular(self, lado):
+        return 6 * lado
+
 class TestGeometria:
     def setup_method(self):
         self.geometria = Geometria()
