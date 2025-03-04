@@ -38,6 +38,16 @@ class Magic:
             return False
         divisores = [i for i in range(1, n) if n % i == 0]
         return sum(divisores) == n
+    
+    def triangulo_pascal(self, n):
+        tri = [[1]]
+        for i in range(1, n):
+            fila = [1]
+            for j in range(1, i):
+                fila.append(tri[i-1][j-1] + tri[i-1][j])
+            fila.append(1)
+            tri.append(fila)
+        return tri[:n]
 
 class TestMagic:
     def setup_method(self):
