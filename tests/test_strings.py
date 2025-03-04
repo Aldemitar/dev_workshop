@@ -9,6 +9,11 @@ class Strings:
     def invertir_cadena(self, cadena):
         return cadena[::-1]  # Retorna la cadena invertida
 
+    def contar_vocales(self, cadena):
+            cadena = cadena.lower()
+            return sum(1 for char in cadena if char in "aeiou")
+    
+    
 class TestStrings:
     def setup_method(self):
         self.strings = Strings()
