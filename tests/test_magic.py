@@ -48,6 +48,12 @@ class Magic:
             fila.append(1)
             tri.append(fila)
         return tri[:n]
+    
+    def factorial(self, n):
+        if n == 0 or n == 1:
+            return 1
+        else:
+            return n * self.factorial(n - 1)
 
 class TestMagic:
     def setup_method(self):
