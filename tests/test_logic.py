@@ -11,6 +11,9 @@ class Logica:
     def NOT(self, a):
         return not a
 
+    def XOR(self, a, b):
+        return a != b
+    
 class TestLogica:
     def setup_method(self):
         self.logica = Logica()
