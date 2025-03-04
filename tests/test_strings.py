@@ -32,6 +32,14 @@ class Strings:
     def eliminar_espacios_duplicados(self, frase):
         return ' '.join(frase.strip().split())
 
+    def es_numero_entero(self, texto):
+        try:
+            int(texto)
+            return True
+        except ValueError:
+            return False
+        
+
 class TestStrings:
     def setup_method(self):
         self.strings = Strings()
@@ -127,4 +135,3 @@ class TestStrings:
         assert self.strings.es_numero_entero("-456") == True
         # Test con números no enteros
         assert self.strings.es_numero_entero("12.34") == False
-        assert self.strings.es_numero_ent
