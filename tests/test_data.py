@@ -44,6 +44,14 @@ class Data:
         n = len(lista)
         posiciones = posiciones % n
         return lista[-posiciones:] + lista[:-posiciones]
+    
+    def encuentra_numero_faltante(self, lista):
+        if not lista:
+            return None
+        n = len(lista) + 1
+        suma_esperada = (n * (n + 1)) // 2
+        suma_real = sum(lista)
+        return suma_esperada - suma_real
 
 
 class TestData:
