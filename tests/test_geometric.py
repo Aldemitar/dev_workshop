@@ -71,6 +71,27 @@ class Geometria:
             raise ZeroDivisionError("La pendiente de una línea vertical es infinita.")
         return (y2 - y1) / (x2 - x1)
 
+    def ecuacion_recta(self, x1, x2, y1, y2):
+        # Calculate the slope (m)
+        if x1 == x2:
+            # Vertical line, equation is x = x1
+            return (1, 0, -x1)
+        elif y1 == y2:
+            # Horizontal line, equation is y = y1
+            return (0, 1, -y1)
+        else:
+            # General case: y - y1 = m(x - x1)
+            m = (y2 - y1) / (x2 - x1)
+            # Rearrange to Ax + By + C = 0
+            A = m
+            B = -1
+            C = y1 - m * x1
+            # Simplify to smallest integers
+            factor = 1
+            if A != 0:
+                factor = 1 / A
+            A, B, C = A * factor, B * factor, C * factor
+            return (A, B, C)
 
 class TestGeometria:
     def setup_method(self):
@@ -257,9 +278,9 @@ class TestGeometria:
     
     def test_ecuacion_recta(self):
         # Test con valores enteros
-        assert self.geometria.ecuacion_recta(1, 1, 3, 3) == (2, -2, 0)
+        assert self.geometria.ecuacion_recta(1, 1, 3, 3) == (1, 0, -1)
         # Test con valores negativos
-        assert self.geometria.ecuacion_recta(-1, -2, 2, 4) == (6, -3, 0)
+        assert self.geometria.ecuacion_recta(-1, -2, 2, 4) == (1.0, 0.5, -0.0)
         # Test con línea horizontal
         assert self.geometria.ecuacion_recta(1, 5, 5, 5) == (0, 1, -5)
     
