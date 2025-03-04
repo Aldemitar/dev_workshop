@@ -7,6 +7,9 @@ class Logica:
     
     def OR(self, a, b):
         return a or b
+    
+    def NOT(self, a):
+        return not a
 
 class TestLogica:
     def setup_method(self):
