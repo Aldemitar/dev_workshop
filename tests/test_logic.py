@@ -19,6 +19,9 @@ class Logica:
 
     def NOR(self, a, b):
         return not (a or b)
+    
+    def XNOR(self, a, b):
+        return a == b
 
 class TestLogica:
     def setup_method(self):
