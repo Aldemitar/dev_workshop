@@ -110,6 +110,9 @@ class Data:
                 "is_empty": cola.is_empty
             }    
 
+    def matriz_transpuesta(self, matriz):
+            return [list(fila) for fila in zip(*matriz)]
+
 class TestData:
     def setup_method(self):
         self.data = Data()
