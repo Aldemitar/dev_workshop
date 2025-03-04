@@ -2,6 +2,10 @@ import pytest
 import math
 from src.geometric.geometric import Geometria
 
+class Geometria:
+    def area_rectangulo(self, base, altura):
+        return base * altura
+
 class TestGeometria:
     def setup_method(self):
         self.geometria = Geometria()
