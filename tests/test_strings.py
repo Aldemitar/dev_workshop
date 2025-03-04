@@ -6,6 +6,9 @@ class Strings:
         cadena = cadena.replace(" ", "").lower()  # Elimina espacios y convierte a minúsculas
         return cadena == cadena[::-1]  # Compara la cadena con su reverso
 
+    def invertir_cadena(self, cadena):
+        return cadena[::-1]  # Retorna la cadena invertida
+
 class TestStrings:
     def setup_method(self):
         self.strings = Strings()
