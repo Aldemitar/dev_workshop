@@ -30,6 +30,8 @@ class Geometria:
     def area_rombo(self, diagonal_mayor, diagonal_menor):
         return 0.5 * diagonal_mayor * diagonal_menor
 
+    def area_pentagono_regular(self, lado, apotema):
+        return 0.5 * 5 * lado * apotema
 
 
 class TestGeometria:
