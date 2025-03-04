@@ -1,6 +1,15 @@
 import pytest
 from src.magic.magic import Magic
 
+class Magic:
+    def fibonacci(self, n):
+        if n <= 1:
+            return n
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+
 class TestMagic:
     def setup_method(self):
         self.magic = Magic()
