@@ -9,7 +9,8 @@ class Geometria:
     def perimetro_rectangulo(self, base, altura):
         return 2 * (base + altura)
 
-
+    def area_circulo(self, radio):
+        return math.pi * radio ** 2
 
 class TestGeometria:
     def setup_method(self):
