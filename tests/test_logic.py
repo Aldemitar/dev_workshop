@@ -17,6 +17,9 @@ class Logica:
     def NAND(self, a, b):
         return not (a and b)
 
+    def NOR(self, a, b):
+        return not (a or b)
+
 class TestLogica:
     def setup_method(self):
         self.logica = Logica()
