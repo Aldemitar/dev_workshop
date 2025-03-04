@@ -10,8 +10,17 @@ class Data:
          if elemento in lista:
             return lista.index(elemento)
          return -1
-    
-    
+
+    def eliminar_duplicados(self, lista):
+        vistos = set()
+        resultado = []
+        for elemento in lista:
+            if (elemento, type(elemento)) not in vistos:
+                resultado.append(elemento)
+                vistos.add((elemento, type(elemento)))
+        return resultado
+
+
 class TestData:
     def setup_method(self):
         self.data = Data()
