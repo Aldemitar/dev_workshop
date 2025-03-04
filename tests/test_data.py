@@ -53,6 +53,8 @@ class Data:
         suma_real = sum(lista)
         return suma_esperada - suma_real
 
+    def es_subconjunto(self, lista1, lista2):
+        return set(lista1).issubset(set(lista2))
 
 class TestData:
     def setup_method(self):
