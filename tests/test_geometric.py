@@ -72,27 +72,24 @@ class Geometria:
         return (y2 - y1) / (x2 - x1)
 
     def ecuacion_recta(self, x1, x2, y1, y2):
-        # Calculate the slope (m)
         if x1 == x2:
-            # Vertical line, equation is x = x1
             return (1, 0, -x1)
         elif y1 == y2:
-            # Horizontal line, equation is y = y1
             return (0, 1, -y1)
         else:
-            # General case: y - y1 = m(x - x1)
             m = (y2 - y1) / (x2 - x1)
-            # Rearrange to Ax + By + C = 0
             A = m
             B = -1
             C = y1 - m * x1
-            # Simplify to smallest integers
             factor = 1
             if A != 0:
                 factor = 1 / A
             A, B, C = A * factor, B * factor, C * factor
             return (A, B, C)
 
+    def area_poligono_regular(self, n, l, a):
+        return (n * l * a) / 2
+    
 class TestGeometria:
     def setup_method(self):
         self.geometria = Geometria()
@@ -288,7 +285,7 @@ class TestGeometria:
         # Test con triángulo regular
         assert round(self.geometria.area_poligono_regular(3, 10, 2.89), 2) == 43.35
         # Test con cuadrado
-        assert self.geometria.area_poligono_regular(4, 5, 2.5) == 50
+        assert self.geometria.area_poligono_regular(4, 5, 2.5) == 25.0
         # Test con pentágono
         assert round(self.geometria.area_poligono_regular(5, 6, 4.1), 2) == 61.5
     
