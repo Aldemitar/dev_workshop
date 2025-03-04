@@ -17,6 +17,10 @@ class Strings:
         cadena = cadena.lower()
         return sum(1 for char in cadena if char.isalpha() and char not in "aeiou")
 
+    def es_anagrama(self, cadena1, cadena2):
+            cadena1 = cadena1.replace(" ", "").lower()
+            cadena2 = cadena2.replace(" ", "").lower()
+            return sorted(cadena1) == sorted(cadena2)
     
 class TestStrings:
     def setup_method(self):
