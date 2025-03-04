@@ -1,6 +1,22 @@
 import pytest
 from src.data.data import Data
 
+class Pila:
+    def __init__(self):
+        self.elementos = []
+    def push(self, valor):
+        self.elementos.append(valor)
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("No se puede hacer pop en una pila vacía")
+        return self.elementos.pop()
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("No se puede hacer peek en una pila vacía")
+        return self.elementos[-1]
+    def is_empty(self):
+        return len(self.elementos) == 0
+
 class Data:
     def invertir_lista(self,lista):
         lista.reverse()
@@ -55,6 +71,16 @@ class Data:
 
     def es_subconjunto(self, lista1, lista2):
         return set(lista1).issubset(set(lista2))
+    
+    def implementar_pila(self):
+        pila = Pila()
+        return {
+            "push": pila.push,
+            "pop": pila.pop,
+            "peek": pila.peek,
+            "is_empty": pila.is_empty
+        }
+
 
 class TestData:
     def setup_method(self):
