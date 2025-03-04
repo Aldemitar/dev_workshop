@@ -90,6 +90,9 @@ class Geometria:
     def area_poligono_regular(self, n, l, a):
         return (n * l * a) / 2
     
+    def perimetro_poligono_regular(self, n, l):
+        return n * l
+    
 class TestGeometria:
     def setup_method(self):
         self.geometria = Geometria()
