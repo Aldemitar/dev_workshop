@@ -1,6 +1,11 @@
 import pytest
 from src.strings.strings import Strings
 
+class Strings:
+    def es_palindromo(self, cadena):
+        cadena = cadena.replace(" ", "").lower()  # Elimina espacios y convierte a minúsculas
+        return cadena == cadena[::-1]  # Compara la cadena con su reverso
+
 class TestStrings:
     def setup_method(self):
         self.strings = Strings()
