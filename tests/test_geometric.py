@@ -51,6 +51,8 @@ class Geometria:
     def volumen_esfera(self, radio):
         return (4/3) * math.pi * (radio ** 3)
 
+    def area_superficie_esfera(self, radio):
+        return 4 * math.pi * (radio ** 2)
 
 class TestGeometria:
     def setup_method(self):
