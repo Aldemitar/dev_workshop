@@ -9,6 +9,15 @@ class Magic:
         for _ in range(2, n + 1):
             a, b = b, a + b
         return b
+    
+    def secuencia_fibonacci(self, n):
+        secuencia = []
+        a, b = 0, 1
+        for _ in range(n):
+            secuencia.append(a)
+            a, b = b, a + b
+        return secuencia
+
 
 class TestMagic:
     def setup_method(self):
