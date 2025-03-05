@@ -47,16 +47,7 @@ class Geometria:
         return 0.5 * 5 * lado * apotema
     
     def perimetro_pentagono_regular(self, lado):
-        """
-        Calcula el perímetro de un pentágono regular.
-        
-        Args:
-            lado (float): Longitud del lado del pentágono
-            
-        Returns:
-            float: Perímetro del pentágono regular
-        """
-        pass
+       return 5 * lado
     
     def area_hexagono_regular(self, lado, apotema):
         """
