@@ -13,16 +13,12 @@ class Magic:
         return b
     
     def secuencia_fibonacci(self, n):
-        """
-        Genera los primeros n números de la secuencia de Fibonacci.
-        
-        Args:
-            n (int): Cantidad de números a generar
-            
-        Returns:
-            list: Lista con los primeros n números de Fibonacci
-        """
-        pass
+        secuencia = []
+        a, b = 0, 1
+        for _ in range(n):
+            secuencia.append(a)
+            a, b = b, a + b
+        return secuencia
     
     def es_primo(self, n):
         """
