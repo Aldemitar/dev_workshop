@@ -29,16 +29,7 @@ class Strings:
         return len(palabras)
     
     def palabras_mayus(self, texto):
-        """
-        Pon en Mayuscula la primera letra de cada palabra en una cadena.
-        
-        Args:
-            texto (str): Cadena
-            
-        Returns:
-            str: Cadena con la primera letra de cada palabra en mayúscula
-        """
-        pass
+        return texto.title()
     
     def eliminar_espacios_duplicados(self, texto):
         """
