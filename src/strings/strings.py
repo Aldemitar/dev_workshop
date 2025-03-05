@@ -16,16 +16,8 @@ class Strings:
             return sum(1 for char in texto if char in "aeiou")
     
     def contar_consonantes(self, texto):
-        """
-        Cuenta el número de consonantes en una cadena.
-        
-        Args:
-            texto (str): Cadena para contar consonantes
-            
-        Returns:
-            int: Número de consonantes en la cadena
-        """
-        pass
+        texto = texto.lower()
+        return sum(1 for char in texto if char.isalpha() and char not in "aeiou")
     
     def es_anagrama(self, texto1, texto2):
         """
