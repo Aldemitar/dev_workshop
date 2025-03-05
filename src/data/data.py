@@ -14,30 +14,31 @@ class Data:
          return -1
     
     def eliminar_duplicados(self, lista):
-        """
-        Elimina elementos duplicados de una lista sin usar set().
-        Mantiene el orden original de aparición.
-        
-        Args:
-            lista (list): Lista con posibles duplicados
-            
-        Returns:
-            list: Lista sin elementos duplicados
-        """
-        pass
+        vistos = set()
+        resultado = []
+        for elemento in lista:
+            if (elemento, type(elemento)) not in vistos:
+                resultado.append(elemento)
+                vistos.add((elemento, type(elemento)))
+        return resultado
     
     def merge_ordenado(self, lista1, lista2):
-        """
-        Combina dos listas ordenadas en una sola lista ordenada.
-        
-        Args:
-            lista1 (list): Primera lista ordenada
-            lista2 (list): Segunda lista ordenada
-            
-        Returns:
-            list: Lista combinada y ordenada
-        """
-        pass
+        resultado = []
+        i, j = 0, 0  
+        while i < len(lista1) and j < len(lista2):
+            if lista1[i] < lista2[j]:
+                resultado.append(lista1[i])
+                i += 1
+            else:
+                resultado.append(lista2[j])
+                j += 1
+        while i < len(lista1):
+            resultado.append(lista1[i])
+            i += 1
+        while j < len(lista2):
+            resultado.append(lista2[j])
+            j += 1
+        return resultado
     
     def rotar_lista(self, lista, k):
         """
