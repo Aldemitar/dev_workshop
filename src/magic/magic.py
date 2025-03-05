@@ -50,19 +50,12 @@ class Magic:
             fila.append(1)
             triangulo.append(fila)
         return triangulo
-
     
     def factorial(self, n):
-        """
-        Calcula el factorial de un número.
-        
-        Args:
-            n (int): Número para calcular su factorial
-            
-        Returns:
-            int: El factorial de n
-        """
-        pass
+        if n == 0 or n == 1:
+            return 1
+        else:
+            return n * self.factorial(n - 1)
     
     def mcd(self, a, b):
         """
