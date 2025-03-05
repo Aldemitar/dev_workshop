@@ -68,17 +68,8 @@ class Magic:
         return abs(a * b) // self.mcd(a, b)
     
     def suma_digitos(self, n):
-        """
-        Calcula la suma de los dígitos de un número.
-        
-        Args:
-            n (int): Número para sumar sus dígitos
-            
-        Returns:
-            int: La suma de los dígitos de n
-        """
-        pass
-    
+        return sum(int(digit) for digit in str(abs(n)))
+
     def es_numero_armstrong(self, n):
         """
         Verifica si un número es de Armstrong (igual a la suma de sus dígitos elevados a la potencia del número de dígitos).
