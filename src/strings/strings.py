@@ -25,16 +25,8 @@ class Strings:
             return sorted(texto1) == sorted(texto2)
     
     def contar_palabras(self, texto):
-        """
-        Cuenta el número de palabras en una cadena.
-        
-        Args:
-            texto (str): Cadena para contar palabras
-            
-        Returns:
-            int: Número de palabras en la cadena
-        """
-        pass
+        palabras = texto.strip().split()
+        return len(palabras)
     
     def palabras_mayus(self, texto):
         """
