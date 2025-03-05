@@ -1,3 +1,19 @@
+class Pila:
+    def __init__(self):
+        self.elementos = []
+    def push(self, valor):
+        self.elementos.append(valor)
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("No se puede hacer pop en una pila vacía")
+        return self.elementos.pop()
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("No se puede hacer peek en una pila vacía")
+        return self.elementos[-1]
+    def is_empty(self):
+        return len(self.elementos) == 0
+
 class Data:
     """
     Clase con métodos para operaciones y manipulaciones de estructuras de datos.
@@ -59,13 +75,14 @@ class Data:
         return set(conjunto1).issubset(set(conjunto2))
     
     def implementar_pila(self):
-        """
-        Implementa una estructura de datos tipo pila (stack) usando listas.
-        
-        Returns:
-            dict: Diccionario con métodos push, pop, peek y is_empty
-        """
-        pass
+        pila = Pila()
+        return {
+            "push": pila.push,
+            "pop": pila.pop,
+            "peek": pila.peek,
+            "is_empty": pila.is_empty
+        }
+    
     
     def implementar_cola(self):
         """
