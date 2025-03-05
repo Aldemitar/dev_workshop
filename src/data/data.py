@@ -9,18 +9,9 @@ class Data:
         return lista
     
     def buscar_elemento(self, lista, elemento):
-        """
-        Busca un elemento en una lista y devuelve su índice (o -1 si no existe).
-        Implementación manual sin usar index().
-        
-        Args:
-            lista (list): Lista donde buscar
-            elemento: Elemento a buscar
-            
-        Returns:
-            int: Índice del elemento o -1 si no se encuentra
-        """
-        pass
+         if elemento in lista:
+            return lista.index(elemento)
+         return -1
     
     def eliminar_duplicados(self, lista):
         """
