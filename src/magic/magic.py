@@ -42,16 +42,15 @@ class Magic:
         return sum(divisores) == n
     
     def triangulo_pascal(self, filas):
-        """
-        Genera las primeras n filas del triángulo de Pascal.
-        
-        Args:
-            filas (int): Número de filas a generar
-            
-        Returns:
-            list: Lista de listas que representa el triángulo de Pascal
-        """
-        pass
+        triangulo = [[1]]
+        for i in range(1, filas):
+            fila = [1]
+            for j in range(1, i):
+                fila.append(triangulo[i-1][j-1] + triangulo[i-1][j])
+            fila.append(1)
+            triangulo.append(fila)
+        return triangulo
+
     
     def factorial(self, n):
         """
