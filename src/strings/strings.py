@@ -12,16 +12,8 @@ class Strings:
         return texto[::-1]
     
     def contar_vocales(self, texto):
-        """
-        Cuenta el número de vocales en una cadena.
-        
-        Args:
-            texto (str): Cadena para contar vocales
-            
-        Returns:
-            int: Número de vocales en la cadena
-        """
-        pass
+            texto = texto.lower()
+            return sum(1 for char in texto if char in "aeiou")
     
     def contar_consonantes(self, texto):
         """
