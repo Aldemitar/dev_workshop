@@ -32,16 +32,7 @@ class Strings:
         return texto.title()
     
     def eliminar_espacios_duplicados(self, texto):
-        """
-        Elimina espacios duplicados en una cadena.
-        
-        Args:
-            texto (str): Cadena con posibles espacios duplicados
-            
-        Returns:
-            str: Cadena sin espacios duplicados
-        """
-        pass
+        return ' '.join(texto.strip().split())
     
     def es_numero_entero(self, texto):
         """
