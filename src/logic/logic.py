@@ -19,17 +19,7 @@ class Logica:
         return not (a and b)
     
     def NOR(self, a, b):
-        """
-        Implementa la operación lógica NOR (NOT OR).
-        
-        Args:
-            a (bool): Primer valor booleano
-            b (bool): Segundo valor booleano
-            
-        Returns:
-            bool: Resultado de a NOR b
-        """
-        pass
+        return not (a or b)
     
     def XNOR(self, a, b):
         """
