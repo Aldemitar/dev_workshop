@@ -56,17 +56,7 @@ class Data:
         return suma_esperada - suma_real
     
     def es_subconjunto(self, conjunto1, conjunto2):
-        """
-        Verifica si conjunto1 es subconjunto de conjunto2 sin usar set.
-        
-        Args:
-            conjunto1 (list): Posible subconjunto
-            conjunto2 (list): Conjunto principal
-            
-        Returns:
-            bool: True si conjunto1 es subconjunto de conjunto2, False en caso contrario
-        """
-        pass
+        return set(conjunto1).issubset(set(conjunto2))
     
     def implementar_pila(self):
         """
