@@ -85,19 +85,20 @@ class Geometria:
         return (y2 - y1) / (x2 - x1)
     
     def ecuacion_recta(self, x1, y1, x2, y2):
-        """
-        Obtiene los coeficientes de la ecuación de una recta en la forma Ax + By + C = 0.
-        
-        Args:
-            x1 (float): Coordenada x del primer punto
-            y1 (float): Coordenada y del primer punto
-            x2 (float): Coordenada x del segundo punto
-            y2 (float): Coordenada y del segundo punto
-            
-        Returns:
-            tuple: Coeficientes (A, B, C) de la ecuación de la recta
-        """
-        pass
+        if x1 == x2:
+            return (1, 0, -x1)
+        elif y1 == y2:
+            return (0, 1, -y1)
+        else:
+            m = (y2 - y1) / (x2 - x1)
+            A = m
+            B = -1
+            C = y1 - m * x1
+            factor = 1
+            if A != 0:
+                factor = 1 / A
+            A, B, C = A * factor, B * factor, C * factor
+            return (A, B, C)
     
     def area_poligono_regular(self, num_lados, lado, apotema):
         """
