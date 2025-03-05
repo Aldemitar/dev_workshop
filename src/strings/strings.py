@@ -20,17 +20,9 @@ class Strings:
         return sum(1 for char in texto if char.isalpha() and char not in "aeiou")
     
     def es_anagrama(self, texto1, texto2):
-        """
-        Verifica si dos cadenas son anagramas (contienen exactamente los mismos caracteres).
-        
-        Args:
-            texto1 (str): Primera cadena
-            texto2 (str): Segunda cadena
-            
-        Returns:
-            bool: True si son anagramas, False en caso contrario
-        """
-        pass
+            texto1 = texto1.replace(" ", "").lower()
+            texto2 = texto2.replace(" ", "").lower()
+            return sorted(texto1) == sorted(texto2)
     
     def contar_palabras(self, texto):
         """
