@@ -59,16 +59,7 @@ class Geometria:
         return lado ** 3
     
     def area_superficie_cubo(self, lado):
-        """
-        Calcula el área de la superficie de un cubo.
-        
-        Args:
-            lado (float): Longitud del lado del cubo
-            
-        Returns:
-            float: Área de la superficie del cubo
-        """
-        pass
+        return 6 * (lado ** 2)
     
     def volumen_esfera(self, radio):
         """
